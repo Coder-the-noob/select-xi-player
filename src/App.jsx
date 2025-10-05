@@ -1,5 +1,6 @@
 import { Suspense, useState } from "react";
 import "./App.css";
+import { ToastContainer} from 'react-toastify';
 import AvailablePlayers from "./components/AvailablePlayers/AvailablePlayers";
 import Navbar from "./components/Navbar/Navbar";
 import SelectedPlayers from "./components/SelectedPlayers/SelectedPlayers";
@@ -52,6 +53,8 @@ function App() {
       ) : (
         <SelectedPlayers removePlayer={removePlayer} puarchaseddPlayers={puarchaseddPlayers}></SelectedPlayers>
       )}
+
+      <ToastContainer/>
     </>
   );
 }
