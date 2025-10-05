@@ -22,7 +22,7 @@ const PlayerCard = ({player, setAvailableBalance, availableBalance, puarchaseddP
         setPurchasedPlayers([...puarchaseddPlayers,playerData])    
     }
   return (
-    <div className="card bg-base-100 w-96 shadow-sm p-4">
+    <div className="card bg-base-100 w-96 shadow-sm p-4 my-5">
       <figure>
         <img
           className="w-full h-[350px] object-cover"
