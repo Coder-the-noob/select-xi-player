@@ -20,7 +20,7 @@ function App() {
       const filterData = puarchaseddPlayers.filter(ply=> ply.playerName !== p.playerName)
       console.log(filterData)
       setPurchasedPlayers(filterData)
-      setAvailableBalance(availableBalance+p.price.split("$").join("").split(",").join(""))
+      setAvailableBalance(availableBalance+ parseInt(p.price.split("$").join("").split(",").join("")))
   }
   
   return (
