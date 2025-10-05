@@ -13,6 +13,7 @@ const playerPromise = fetchPlayers();
 function App() {
   const [toggle, setToggle] = useState(true);
   const [availableBalance, setAvailableBalance] = useState(600000)
+  const [puarchaseddPlayers, setPurchasedPlayers] = useState([])
   
   return (
     <>
@@ -35,10 +36,10 @@ function App() {
             <span className="loading loading-spinner loading-xl"></span>
           }
         >
-          <AvailablePlayers availableBalance={availableBalance} setAvailableBalance={setAvailableBalance} playerPromise={playerPromise}></AvailablePlayers>
+        <AvailablePlayers puarchaseddPlayers={puarchaseddPlayers} setPurchasedPlayers={setPurchasedPlayers} availableBalance={availableBalance} setAvailableBalance={setAvailableBalance} playerPromise={playerPromise}></AvailablePlayers>
         </Suspense>
       ) : (
-        <SelectedPlayers></SelectedPlayers>
+        <SelectedPlayers puarchaseddPlayers={puarchaseddPlayers}></SelectedPlayers>
       )}
     </>
   );

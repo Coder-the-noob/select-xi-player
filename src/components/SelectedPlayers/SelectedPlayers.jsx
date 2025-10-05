@@ -1,6 +1,7 @@
 import React from 'react';
 
-const SelectedPlayers = () => {
+const SelectedPlayers = ({puarchaseddPlayers}) => {
+    console.log(puarchaseddPlayers)
     return (
         <div className='max-w-[1200px] mx-auto'>
             Select palyers
